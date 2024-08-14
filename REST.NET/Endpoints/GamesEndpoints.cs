@@ -1,4 +1,6 @@
+using REST.NET.Data;
 using REST.NET.Dtos;
+using REST.NET.Entities;
 
 namespace REST.NET.Endpoints;
 
@@ -26,19 +28,35 @@ public static class GamesEndpoints
             })
             .WithName(getGameEndpointName);
 
-        group.MapPost("/", (CreateGameDto newGame) =>
+        group.MapPost("/", (CreateGameDto newGame, ApplicationDbContext dbContext) =>
         {
-            GameDto game = new(
-                games.Count + 1,
-                newGame.Name,
-                newGame.Genre,
-                newGame.Price,
-                newGame.ReleaseDate
-            );
-    
-            games.Add(game);
+            var genre = dbContext.Genres.SingleOrDefault(g => g.Id == newGame.GenreId);
+            if (genre == null)
+            {
+                return Results.NotFound("Genre not found.");
+            }
 
-            return Results.CreatedAtRoute(getGameEndpointName, new {id = game.Id}, game);
+            Game game = new()
+            {
+                Name = newGame.Name,
+                Genre = genre,
+                GenreId = newGame.GenreId,
+                Price = newGame.Price,
+                ReleaseDate = newGame.ReleaseDate
+            };
+    
+            dbContext.Games.Add(game);
+            dbContext.SaveChanges();
+
+            GameDto gameDto = new(
+                game.Id,
+                game.Name,
+                game.Genre.Name,
+                game.Price,
+                game.ReleaseDate
+            );
+
+            return Results.CreatedAtRoute(getGameEndpointName, new {id = game.Id}, gameDto);
         });
 
         group.MapPut("/{id}", (int id, UpdateGameDto updatedGame) =>
