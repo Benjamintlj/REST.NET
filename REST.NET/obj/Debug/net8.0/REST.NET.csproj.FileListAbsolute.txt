@@ -24,3 +24,9 @@
 /Users/benjaminlewis-jones/Documents/Projects/DotNet/REST.NET/REST.NET/obj/Debug/net8.0/REST.NET.pdb
 /Users/benjaminlewis-jones/Documents/Projects/DotNet/REST.NET/REST.NET/obj/Debug/net8.0/REST.NET.genruntimeconfig.cache
 /Users/benjaminlewis-jones/Documents/Projects/DotNet/REST.NET/REST.NET/obj/Debug/net8.0/ref/REST.NET.dll
+/Users/benjaminlewis-jones/Documents/Projects/DotNet/REST.NET/REST.NET/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/Users/benjaminlewis-jones/Documents/Projects/DotNet/REST.NET/REST.NET/bin/Debug/net8.0/MinimalApis.Extensions.dll
+/Users/benjaminlewis-jones/Documents/Projects/DotNet/REST.NET/REST.NET/bin/Debug/net8.0/MiniValidation.dll
+/Users/benjaminlewis-jones/Documents/Projects/DotNet/REST.NET/REST.NET/obj/Debug/net8.0/REST.NET.csproj.AssemblyReference.cache
+/Users/benjaminlewis-jones/Documents/Projects/DotNet/REST.NET/REST.NET/obj/Debug/net8.0/REST.NET.MvcApplicationPartsAssemblyInfo.cs
+/Users/benjaminlewis-jones/Documents/Projects/DotNet/REST.NET/REST.NET/obj/Debug/net8.0/REST.NET.csproj.Up2Date
