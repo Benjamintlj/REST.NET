@@ -14,8 +14,9 @@ builder.Services.AddSqlServer<ApplicationDbContext>(connectionString);
 var app = builder.Build();
 
 app.MapGamesEndpoints();
+app.MapGenreEndpoints();
 
-app.MigrateDb();
+await app.MigrateDbAsync();
 
 /////////////////////
 // Start

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("REST.NET")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de27216d9c058f2e895ab19a4731461e9f84e0a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c5e313f0c5be8bd2b4510c8449b08787ac6cbdc")]
 [assembly: System.Reflection.AssemblyProductAttribute("REST.NET")]
 [assembly: System.Reflection.AssemblyTitleAttribute("REST.NET")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
